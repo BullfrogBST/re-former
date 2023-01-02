@@ -1,0 +1,48 @@
+<%= form_with model: @user do |form| %>
+    <p>
+        <%= form.label(:username, "Username:") %>
+        <%= form.text_field(:username, placeholder: "Who are you?") %>
+    </p>
+    <p>
+        <%= form.label(:email, "Email:") %>
+        <%= form.text_field(:email, placeholder: "example@example.com") %>
+    </p>
+    <p>
+        <%= form.label(:password, "Password:") %>
+        <%= form.password_field(:password, placeholder: "Keep this secret!") %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
+
+<!-- <%= form_tag("/users/create", method: "post") do%>
+    <p>
+        <%= label_tag(:username, "Username:") %>
+        <%= text_field_tag(:username)%>
+    </p>
+    <p>
+        <%= label_tag(:email, "Email:") %>
+        <%= text_field_tag(:email) %>
+    </p>
+    <p>
+        <%= label_tag(:password, "Password:") %>
+        <%= password_field_tag(:password) %>
+    </p>
+    <p>
+        <%= submit_tag %>
+    </p>
+<% end %> %> -->
+
+<%# <form action="/users/create" method="post" accept-charset="UTF-8">
+    <label for="username">Username:</label>
+    <input type="text" name="user[username]">
+
+    <label for="email">Email:</label>
+    <input type="text" name="user[email]">
+
+    <label for="password">Password:</label>
+    <input type="password" name="user[password]">
+
+    <input type="submit">
+</form> %>
